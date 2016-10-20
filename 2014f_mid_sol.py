@@ -61,6 +61,7 @@ def insert_second(self, item):
 
 
 Q4
+(First)
 def filter_positive(lst):
 	pos_lst = LinkedList([])
 	curr = lst.first
@@ -76,6 +77,17 @@ def filter_positive(lst):
 				last.next = Node(curr.item)
 		curr = curr.next
 	return pos_lst
+
+(Second)
+def filter_positive(lst):
+	pos_lst = []
+
+	curr = lst.first
+	while curr:
+		if curr.item > 0:
+			pos_lst.append(curr.item)
+		curr = curr.next
+	return LinkedList(pos_lst)
 
 
 Q5(Bonus)
